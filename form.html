@@ -1,0 +1,36 @@
+<html>
+<head> <h2> my learning </h2> </head>
+<body>
+
+	<form action="form.php" method="POST">
+	<label for="firstname"><b>First Name</b> </label><br>
+	<input type="text" name="firstname" placeholder="enter first name" id="firstname">
+	<br><br>
+	<label for="lastname"><b>Last Name<b> </label><br><br>
+	<input type="text" name="lastname" placeholder="enter last name" id="lastname">
+	<br><br>
+	<label><b>Gender</b></label><br><br>
+	<input type="radio" name="gender" value="male" checked>male<br><br>
+	<input type="radio" name="gender" value="female">female<br><br>
+	<input type="radio" name="gender" value="other">other<br><br>
+	<label for="phonenumber"><b>Phone Number</b></label><br><br>
+	<input type="number" name="phonenumber" placeholder="enter phone number" id="phonenumber"><br><br>
+	<label for="subjects"><b>Enroll subjects</b></label><br><br>
+	<input type="checkbox" name="sub[]" value="spoken english" id="subjects">spoken english<br><br>
+	<input type="checkbox" name="sub[]" value="HTML" id="subjects">HTML<br><br>
+	<input type="checkbox" name="sub[]" value="PHP" id="subjects">PHP<br><br>
+	<input type="checkbox" name="sub[]" value="JAVA" id="subjects">JAVA<br><br>
+	<input type="checkbox" name="sub[]" value="ORACAL" id="subjects">ORACAL<br><br>
+	<label><b>Select your city</b></label><br><br>
+	<select name="city">
+	<option value="Allahabad">Allahabad</option>
+	<option value="Kanpur">Kanpur</option>
+	<option value="Kanpur">Lucknow</option>
+	<option value="Kanpur">Varanasi</option>
+	<option value="Kanpur">Delhi</option>
+	</select>
+	<br><br>
+	<input type="submit" value="submit"><br>
+</body>
+</html>
+	
