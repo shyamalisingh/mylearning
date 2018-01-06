@@ -1,0 +1,7 @@
+.navbar-default .navbar-brand {
+  color: #FF0000;
+}
+ 
+li.active{
+	color: #FF0000;
+	}
