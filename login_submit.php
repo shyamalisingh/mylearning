@@ -12,7 +12,7 @@ session_start();
 	$email= $_POST["Username"];
 	$password= $_POST["password"];
 	
-	$sql="select name,email,password from users where email='$email' and password='$password'";
+	$sql="select firstName,email,password from users where email='$email' and password='$password'";
 	//echo $sql;
 	$result=mysqli_query($dbConnectLink,$sql);
 		$rowcount=mysqli_num_rows($result);
@@ -21,7 +21,7 @@ session_start();
 			
 			$_session["email"]=$email;
 			echo "welcome user $row[0]";
-			echo "<a href='logout.php?p=index.php'>logout</a>";
+			echo "<a href='logout.php'>logout</a>";
 			echo "<br/><br />";
 			
 			$_session["name"]=$row[0];

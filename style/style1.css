@@ -7,17 +7,22 @@
 		
 	}
 	
-	h1{
+	h1.top1{
 		color:#ff6347;
 		font-size:20px;
 		font-family:Lucida Console;
 		}
-	h2{
+	h2.top1{
 		color:#446DB2;
-		font-size:18px;
+		font-size:30px;
 		font-family:'Varela Round',sans-serif;
 		}
-	b{
+	h3.top1{
+		color:#406fb4;
+		font-size:15px;
+		font-family:'Varela Round',sans-serif;
+	}
+	b.top1{
 		color:black;
 		font-size:18px;
 		font-family:'Varela Round',sans-serif;
@@ -28,6 +33,14 @@
 			font-family: 'Open Sans', sans-serif;
 			font-size:15px;
 			line-height: 25px;
+		}
+	label.top1{
+			border: 2px solid black;
+			outline: #4CAF50 solid 5px;
+			margin: auto;    
+			padding: 3px;
+			/*text-align: center;*/
+
 		}
 	/*.black-btn{ 
 	font-size:22px;
