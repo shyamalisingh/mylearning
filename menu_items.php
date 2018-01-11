@@ -2,12 +2,12 @@
 <html>
     <head>
         <?php
-        include="db_connect.php";
+        include "db_connect.php";
         ?>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css">
         <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css.map">
-       
+        <link rel="stylesheet" type="text/css"href="style/style1.css">
         <script src="js/bootstrap.js" type="javascript"></script>
 
 
@@ -52,7 +52,7 @@
         li a.top:hover {
             background-color: #111111;
         }
-        
+
     </style>
 </head>
 <body>
@@ -61,72 +61,73 @@
         <li class="top"><a class="top" href="#menu">Menu</a></li>
         <li class="top"><a class="top" href="#contact">Reviews</a></li>
         <li class="top"><a class="top" href="#about">Photo</a></li>
+        <li class="top"><a class="top" href="#about">Login</a></li>
     </ul>
     <br>
+    <form name="order_form" id="order_form" action="order_submit.php" method="POST">
+       
     
-    
-    <label>New South Indian & Chinese Foods Menu</label>
+    <?php
+    $dbconnetlink = mysqli_connect("localhost", "shammi", "shammi", "learning");
+    $sql = "select items,price from menu_items";
+    $result = mysqli_query($dbconnetlink, $sql);
+    ?>
+
+    <label class="top1">New South Indian & Chinese Foods Menu</label>
     <br>
     <div class="row">
         <div class="col-md-3 col-sm-6 col-xs-12">
-            <h2>Chinese Food</h2>
+            <h2 class="top1">Chinese Food</h2>
         </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
-            <h2>Price</h2>
+            <h2 class="top1">Price</h2>
 
         </div>
         <div class="col-md-3 col-sm-6 col-xs-12">
-            <h2>select Item</h2>
+            <h2 class="top1">select Item</h2>
 
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12">
+            <h2 class="top1">selected Items</h2>
         </div>
     </div>
     <ul>
-        <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <li>crispy noodles</li>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <li>50/-</li>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <label for="chk1"></label><input type="checkbox" id="chk1"/>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 col-sm-6 col- xs-12">
-                <li>Chowmein
-            </div>
-        </div>
-        
-        
-        <div class="row">
-            <div class="col-md-3 col-sm-6 col- xs-12">
-                <ul>
-                <li>Veg-Chowmein</li>
-                </ul>
-            </div>
-            <div class="col-md-3 col-sm-6 col- xs-12">
-                <li>70/-</li>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-3 col-sm-6 col- xs-12">
-                <ul>
-                <li>Non-veg Chowmein</li>
-                </ul>
-            </div>
-            <div class="col-md-3 col-sm-6 col- xs-12">
-                <li>80/-</li>
-            </div>
-        </div>
-                
-                
-            
-        </li>
-        <li>Haka Saka Chowmein</li>
+
+        <?php
+        while ($row = mysqli_fetch_row($result)) {
+
+            //$sqlb = "SELECT menu_items.items,child_menu.price from menu_items LEFT OUTER JOIN child_menu on child_menu.menu_items_id=menu_items.id where menu_items.items='$row[0]'";
+           // $result2 = mysqli_query($dbconnetlink, $sqlb);
+            //echo $sqlb;
+       ?>
+            <div class="row">
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+
+                        <li>
+                            <?php
+                            echo $row[0];
+                            ?>
+                            <input type="hidden" name="menuitem[]" value="<?php echo $row[0];?>"/>
+                        </li>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <li>
+                            <?php
+                            echo $row[1];
+                            ?>
+                            <input type="hidden" name="price[]" value="<?php echo $row[1];?>"/>
+                        </li>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12">
+                        <label for="chk1"></label><input type="checkbox" id="chk1"name="order[]" value='<?php echo "\"$row[0]\"";?>'/>
+                    </div>
+                </div>
+       <?php
+        }
+        ?>
+         <input type="submit" value="place order" class="btn-primary"/>
+        </form>
     </ul>
-
-
-
+    
 </body>
 </html> 

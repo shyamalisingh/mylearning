@@ -1,6 +1,6 @@
 /* css document*/
 	
-	p{
+	p.top1{
 		color:#ff0000;
 		font-size:18px;
 		font-family:comic sans ms;
@@ -56,10 +56,10 @@
 	color: #406fb4; 
 	border: 2px solid #406fb4;
 		}*/
-	input{
+	/*input{
 	-webkit-appearance: none;
 	-moz-appearance: none; 
-		}
+		}*/
 		/*form{
 	padding: 9px 14px 10px; 
 	line-height: 1;
@@ -71,7 +71,7 @@
 	font-size: 16px;
 }
 */
-form{
+form.top2{
 	background: #5bc4be !important; 
 	font-family: 'Varela Round', Helvetica, arial, sans-serif; 
 	font-weight: bold;
