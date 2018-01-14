@@ -22,7 +22,7 @@
 
                 <form id="form1" name="loginForm" action="login_submit.php" method="POST" class="col-md-4">
                     <div class="input-append">
-                        <label for="Username" class="control-label">Username </label>
+                        <label for="Username" class="control-label">Username yo</label>
                         <span><input type="text"  name="Username" placeholder="Enter Name" id="Username" class="form-control"/>
                             <i class="glyphicon glyphicon-user"></i>
                     </div>
@@ -36,6 +36,7 @@
                     <br><br>
                     <div class="row">
                         <input type="submit" value="Login" class="btn black-btn col-md-4"/>
+                        
                         <a href="registration.php" class="btn">SignUp</a>
                         <a href='answer.php'>forget password</a>
                         <br>

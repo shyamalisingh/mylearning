@@ -1,9 +1,11 @@
 
 <?php
+session_start();
 include "db_connect.php";
 //$orders=$_POST["menuitem"];
 $prices=$_POST["price"];
 $orders = $_POST["order"];
+$username = $_SESSION["email"];
 /*foreach ($orders as $checkbox) {
     echo  $checkbox;
     echo "<br/>";
@@ -19,7 +21,7 @@ foreach ($prices as $price) {
   $total+= $price; 
 }
 //echo "Total price $total";
-$sql="insert into placed_order (ord_item,bill) values ('$items','$rowPrice[0]')";
+$sql="insert into placed_order (ord_item,bill,email) values ('$items','$rowPrice[0]','$username')";
 //echo "$sql";
 $result= mysqli_query($dbConnectLink, $sql);
 if($result==TRUE){
@@ -28,6 +30,9 @@ if($result==TRUE){
 		else{
 			echo "error" . $result . "<br>" . $dbConnectLink->error;
 		}
+                ?>
+<a href ='order_history.php.'>go to order history!</a>
+<?php
 $dbConnectLink->close();
 //echo "your final order is=$items <br> and your total bill is=$total";
 

@@ -19,12 +19,13 @@ session_start();
 		if($rowcount==1){
 			$row=mysqli_fetch_row($result);
 			
-			$_session["email"]=$email;
-			echo "welcome user $row[0]";
-			echo "<a href='logout.php'>logout</a>";
+			$_SESSION["email"]=$email;
+			echo "welcome $row[0]";
+                        echo "<br>";
+			echo "<a href='menu_items.php'>go to menu</a>";
 			echo "<br/><br />";
 			
-			$_session["name"]=$row[0];
+			$_SESSION["name"]=$row[0];
 		}
 		else{
 					echo "invalid user";
