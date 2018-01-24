@@ -7,6 +7,7 @@
 <div class="container">
 <?php
 require("db_connect.php");
+include "nevigation.php";
 if(!isset($_POST["submit"])){
 ?>
 	

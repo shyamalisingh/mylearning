@@ -7,7 +7,7 @@ $dbConnectLink=mysqli_connect("localhost","shammi","shammi","learning");
 			die("Connection failed: " . $dbConnectLink->connect_error);
 		} 
 		
-function writeMsg() {
-    echo "Hello world!";
-}
+//function writeMsg() {
+   // echo "Hello world!";
+//}
 ?>

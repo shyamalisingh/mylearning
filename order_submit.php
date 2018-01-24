@@ -1,7 +1,8 @@
 
 <?php
-session_start();
+//session_start();
 include "db_connect.php";
+include "nevigation.php";
 //$orders=$_POST["menuitem"];
 $prices=$_POST["price"];
 $orders = $_POST["order"];
