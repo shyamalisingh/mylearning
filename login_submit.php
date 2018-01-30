@@ -1,10 +1,9 @@
 <?php
-//include "nevigation.php";
-  $dbConnectLink= mysqli_connect("localhost" , "shammi" , "shammi" , "learning");
-	if($dbConnectLink->connect_error){
-		die("connection faild".$dbConnectLink->connect_error);
-	
-	}
+
+// Start the session
+session_start();
+//include "navigation.php";
+include "db_connect.php";
 	$email= $_POST["Username"];
 	$password= $_POST["password"];
 	

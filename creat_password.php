@@ -13,4 +13,4 @@ session_start();
 	$reenter=$_POST["reenter_password"];
 	
 	$sql= "select user_id,question,answer from users where "
-		
+?>		

@@ -1,5 +1,4 @@
 <?php
-//include "nevigation.php";
 session_start();
 session_destroy();
 echo "logut successfull";

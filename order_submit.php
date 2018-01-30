@@ -2,7 +2,7 @@
 <?php
 //session_start();
 include "db_connect.php";
-include "nevigation.php";
+include "navigation.php";
 //$orders=$_POST["menuitem"];
 $prices=$_POST["price"];
 $orders = $_POST["order"];
@@ -32,7 +32,7 @@ if($result==TRUE){
 			echo "error" . $result . "<br>" . $dbConnectLink->error;
 		}
                 ?>
-<a href ='order_history.php.'>go to order history!</a>
+
 <?php
 $dbConnectLink->close();
 //echo "your final order is=$items <br> and your total bill is=$total";

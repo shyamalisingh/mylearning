@@ -1,71 +1,49 @@
-   <?php
-      include "nevigation.php";
-      ?>
-    <br>
-    <form name="order_form" id="order_form" action="order_submit.php" method="POST">
-
-
 <?php
-$dbconnetlink = mysqli_connect("localhost", "shammi", "shammi", "learning");
-$sql = "select items,price from menu_items";
-$result = mysqli_query($dbconnetlink, $sql);
+include "navigation.php";
 ?>
-
-        <label class="top1">New South Indian & Chinese Foods Menu</label>
-        <br>
+<br>
+<div class ="container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <label class="midhead">Order delicious food online!</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <label class="midhead1">What you would like to have today.....!</label>
+        </div>
+    </div>
+</div>
+<form name="choice_form" id="choice_form" action="menu.php" method="POST">
+    <div class="container">
         <div class="row">
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <h2 class="top1">Chinese Food</h2>
+            <div class="dropdown">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <select name="foodType" placeholder="food type"class="index1">
+                        <option value="northIndian">North Indian</option>
+                        <option value="panjabi">Panjabi</option>
+                        <option value="southIndian">South Indian</option>
+                        <option value="chienes">Chienes</option>
+                        <option value="jain">Jainism</option>
+                    </select>
+                </div>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <h2 class="top1">Price</h2>
-
+            <div class="dropdown">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <select name="menuType"class="index1">
+                        <option value="snackes">Snacks</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="teaTime">Tea Time</option>
+                        <option value="coffee">Cafe coffee day</option>
+                        <option value="dinner">Dinner</option>
+                    </select>
+                </div>
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <h2 class="top1">select Item</h2>
-
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12">
-                <h2 class="top1">selected Items</h2>
+            <div class="dropdown">
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <input type="submit" value="submit" class="btn-primary index2"/>
+                </div>
             </div>
         </div>
-        <ul>
-
-<?php
-while ($row = mysqli_fetch_row($result)) {
-
-    //$sqlb = "SELECT menu_items.items,child_menu.price from menu_items LEFT OUTER JOIN child_menu on child_menu.menu_items_id=menu_items.id where menu_items.items='$row[0]'";
-    // $result2 = mysqli_query($dbconnetlink, $sqlb);
-    //echo $sqlb;
-    ?>
-                <div class="row">
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-
-                        <li>
-                <?php
-                echo $row[0];
-                ?>
-                            <input type="hidden" name="menuitem[]" value="<?php echo $row[0]; ?>"/>
-                        </li>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <li>
-    <?php
-    echo $row[1];
-    ?>
-                            <input type="hidden" name="price[]" value="<?php echo $row[1]; ?>"/>
-                        </li>
-                    </div>
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <label for="chk1"></label><input type="checkbox" id="chk1"name="order[]" value='<?php echo "\"$row[0]\""; ?>'/>
-                    </div>
-                </div>
-    <?php
-}
-?>
-            <input type="submit" value="place order" class="btn-primary"/>
-    </form>
-</ul>
-
-</body>
-</html> 
+    </div>
+</form>
