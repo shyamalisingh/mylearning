@@ -19,22 +19,24 @@ include "navigation.php";
         <div class="row">
             <div class="dropdown">
                 <div class="col-md-3 col-sm-6 col-xs-12">
-                    <select name="foodType" placeholder="food type"class="index1">
+                    <select name="foodType" placeholder="food type" class="index1">
+                        <option value="">Select Food Category</option>
                         <option value="northIndian">North Indian</option>
-                        <option value="panjabi">Panjabi</option>
+                        <option value="punjabi">Punjabi</option>
                         <option value="southIndian">South Indian</option>
-                        <option value="chienes">Chienes</option>
-                        <option value="jain">Jainism</option>
+                        <option value="chinese">Chinese</option>
+                        <option value="jain">Jain</option>
                     </select>
                 </div>
             </div>
             <div class="dropdown">
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <select name="menuType"class="index1">
-                        <option value="snackes">Snacks</option>
+                        <option value="">Select Dite Category</option>
+                        <option value="snacks">Snacks</option>
                         <option value="lunch">Lunch</option>
                         <option value="teaTime">Tea Time</option>
-                        <option value="coffee">Cafe coffee day</option>
+                        <option value="coffee">Coffee Break</option>
                         <option value="dinner">Dinner</option>
                     </select>
                 </div>

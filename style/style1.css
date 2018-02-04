@@ -46,7 +46,7 @@ label.top1{
 label.midhead{
     color : red;
     font-size: 40px;
-    font-family: monospace;
+    font-family: algerian;
     position: relative;
     left:25%;
     right:25%;
@@ -69,12 +69,13 @@ select.index1{
     font-family: cursive;
     border: 2;
     max-width: 400px;
-    background: #f6f8f8;
+    background: #446DB2;
     margin: 6cm;
     border-radius: 4cm;
-    color: #080808;
+    color: #f6f8f8;
     margin-top: 1cm;
     left:1cm;
+    
     
     position: absolute;
    
@@ -133,5 +134,161 @@ form.top2{
     padding: 9px 14px 10px; 
     margin-right: 13px;
     line-height: 1;
-}	
+}
 
+
+label.head1{
+    font-family: 'algerian';
+    font-size: 30px;
+    margin-left: 38%;
+    margin-right: 38%;
+    color:#ff0000;
+}
+input.index03
+{
+    position:absolute;
+    left:1cm;
+   
+   
+    font-size:20px;
+    font-family: cursive;
+    border: 2;
+    max-width: 400px;
+    background: #446DB2;
+    margin-left: 80%;
+    border-radius: 4cm;
+    color: #080808;
+    margin-top: 1cm;
+    
+    
+}
+h2.head01{
+    font-family: 'Broadway';
+    font-size: 25px;
+    margin-left: 1cm;
+    /*margin-right: 38%;*/
+    color:#ff0000;
+}
+li.row1{
+    font-family: 'Broadway';
+    font-size: 15px;
+    margin-left: 5%;
+    /*margin-right: 38%;*/
+    color:#080808;
+}
+li.row2{
+    font-family: 'Broadway';
+    font-size: 15px;
+    margin-left: 8%;
+    /*margin-right: 38%;*/
+    color: #080808;
+}
+input.row2{
+    font-family: 'Broadway';
+    font-size: 15px;
+    margin-left: 25%;
+    /*margin-right: 38%;*/
+    color:#ff0000;
+}
+input.index04
+{
+  
+    font-size:15px;
+    font-family: cursive;
+    border: 1;
+    max-width: 200px;
+    background: #446DB2;
+    border-radius: 1cm;
+    color: #080808;
+    font-weight: bold;
+    margin-left: 10px;
+    
+    
+}
+a.nam1{
+    font-family: cursive;
+    font-size: 15px;
+    color: #080808;
+    font-weight: bold;
+}
+a.nam2{
+    font-family: cursive;
+    position: absolute;
+    font-size: 15px;
+    color: #080808;
+    font-weight: bold;
+}
+form.login-form{
+    margin-left: 25%;
+    margin-top: 5%;
+}
+label.lab1{
+    font-family: Forte;
+    font-size: 25px;
+    color:	#8B0000;
+    font-weight: bold;
+}
+label.lab2{
+    font-family: Forte;
+    font-size: 25px;
+    color: 	#0000CD;
+    font-weight: bold;
+}
+input.index05
+{
+    
+    /*left:1cm;*/
+   
+    
+    font-size:20px;
+    font-family: cursive;
+    font-weight: bold;
+    border: 2;
+    max-width: 300px;
+    background: #446DB2;
+    /*margin: 6cm;*/
+    border-radius: 2cm;
+    color: #080808;
+    /*margin-top: 1cm;*/
+    
+}
+label.lab3{
+    font-family: Forte;
+    font-size: 25px;
+    
+    margin-top: 3%;
+    color: #0000CD;
+    font-weight: bold;
+}
+input.index06
+{
+    
+    /*left:1cm;*/
+   
+    
+    font-size:20px;
+    font-family: cursive;
+    font-weight: bold;
+    border: 2;
+    max-width: 300px;
+    background: #446DB2;
+    /*margin: 6cm;*/
+    border-radius: 2cm;
+    color: #080808;
+    margin-top: 1cm;
+    
+}
+label.midhead3{
+    color : red;
+    font-size: 40px;
+    font-family: algerian;
+    position: relative;
+    left:25%;
+    right:25%;
+    margin-top:1cm;
+ 
+}
+input.login{
+    margin-left: 10cm;
+    
+}

@@ -1,27 +1,27 @@
 <html>
 <head></head>
 <body>
-<h1>Welcome</h1>
 
-<h2>Healthy Bite</h2>
-<div class="container">
+
+
 <?php
 require("db_connect.php");
-include "nevigation.php";
+include "navigation.php";
 if(!isset($_POST["submit"])){
 ?>
-	
+<div class="container">	
 <div class="row">
 	<form action="answer.php" method="POST" class="col-md-4">
 		<div class="input-append">
-			<label class="control-label"><h2>enter email</h2></label>
-			<input type="text" name="email" placeholder="enter email" id="email" class="form-control"/>
+			<label class="control-label lab1">Enter Email</label>
+			<input type="text" name="email" placeholder="Enter Email" id="email" class="form-control"/>
 		</div>
 		<br><br>
-		<input type="submit" value="enter" name="submit" class="btn black-btn col-md-4"/>
+		<input type="submit" value="enter" name="submit" class="btn black-btn col-md-4 index05"/>
 		
 	</form>	
-</div>	
+</div>
+</div>
 <?php
 }
 else{

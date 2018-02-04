@@ -7,31 +7,34 @@
 
 
 <?php
+$foodType=$_POST['foodType'];
+$menuType=$_POST['menuType'];
+$sql = "select items,price from menu_items WHERE sub_category='$foodType' AND category='$menuType'";
 
-$sql = "select items,price from menu_items";
 $result = mysqli_query($dbConnectLink, $sql);
 ?>
         
-        <label class="top1"><?php
-        echo $_POST['foodType']." ".$_POST['menuType'];
+        <label class="head1"><?php
+        echo  $_POST['foodType']." ".$_POST['menuType'];
+        
         ?>
          </label>
         
         <br>
         <div class="row">
             <div class="col-md-3 col-sm-6 col-xs-12">
-                <h2 class="top1">Chinese Food</h2>
+                <h2 class="head01">ItemS</h2>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
-                <h2 class="top1">Price</h2>
+                <h2 class="head01">PricE</h2>
 
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
-                <h2 class="top1">select Item</h2>
+                <h2 class="head01">selecT IteM</h2>
 
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12">
-                <h2 class="top1">selected Items</h2>
+                <h2 class="head01">selecteD ItemS</h2>
             </div>
         </div>
         <ul>
@@ -46,29 +49,29 @@ while ($row = mysqli_fetch_row($result)) {
                 <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-12">
 
-                        <li>
+                        <li class="row1">
                 <?php
                 echo $row[0];
                 ?>
-                            <input type="hidden" name="menuitem[]" value="<?php echo $row[0]; ?>"/>
+                            <input type="hidden" name="menuitem[]"  value="<?php echo $row[0]; ?>"/>
                         </li>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-12">
-                        <li>
+                        <li class="row2">
     <?php
     echo $row[1];
     ?>
-                            <input type="hidden" name="price[]" value="<?php echo $row[1]; ?>"/>
+                            <input type="hidden" name="price[]"  value="<?php echo $row[1]; ?>"/>
                         </li>
                     </div>
                     <div class="col-md-3 col-sm-6 col-xs-12">
-                        <label for="chk1"></label><input type="checkbox" id="chk1"name="order[]" value='<?php echo "\"$row[0]\""; ?>'/>
+                        <label for="chk1"></label><input type="checkbox" id="chk1"name="order[]"class="row2" value='<?php echo "\"$row[0]\""; ?>'/>
                     </div>
                 </div>
     <?php
-}
+} 
 ?>
-            <input type="submit" value="place order" class="btn-primary"/>
+            <input type="submit" value="place order" class="btn-primary index03"/>
     </form>
 </ul>
 

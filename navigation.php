@@ -25,13 +25,15 @@ session_start();
         <link rel="stylesheet" type="text/css"href="style/style1.css">
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          <script src="js/parsley.min.js"></script>
 
         <style>
             body{
-                background-image: url("images/back2.jpg");
+                background-image: url("images/back7.jpg");
                 background-repeat: no-repeat;
-                background-color: #EDF4D2;
-
+                /*background-color: #EDF4D2;*/
+                background-size: cover;
+                height: 1024px;
 
 
             }
